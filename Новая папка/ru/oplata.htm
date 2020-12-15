@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>Оплата | NKBOOST.COM|Купить Арена Рейтинги, РБГ, Верховный Молот, Испытания, Обучение, Прокачка, PVE, PVP, Достижения</title>
+	<link rel="stylesheet" type="text/css" href="../templates/main/css/styles.css">
+        <link rel="icon" href="../templates/main/images/favicon.gif" type="image/x-icon">
+	<link rel="shortcut icon" href="../templates/main/images/favicon.gif" type="image/x-icon">
+	<script src="../../https@ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="../templates/main/js/jquery.tools.min.js"></script>
+	<script src="../templates/main/js/jquery.fancybox-1.3.4.pack.js"></script>
+	<script src="../templates/main/js/jquery.easing.1.3.js"></script>
+	<script src="../templates/main/js/tms-0.3.js"></script>
+	<script src="../templates/main/js/script.js"></script>	
+	<link href="../../fonts.googleapis.com/css@family=Russo+One&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+<script>
+function korzaddnodop(tovar){
+	$.ajax({
+          type: 'GET',
+          url: 'functions/korzinadd.php@tovar='+tovar,
+		  success: showkorzina(),
+		  })
+}
+
+
+function podrobneetov(id){
+        $.ajax({
+          type: 'GET',
+          url: 'vspluv/showpodrob.php@id='+id,
+		  success: function(html){
+		  	$('#oformlenie').hide();
+			$('#korzinkovets').hide();
+			$('#registration').hide();
+			$('#authoris').hide();
+			$('#podrobnvspl').show();
+			$("#podrobnvspl").html(html);
+			}
+        })
+	}
+
+function regshow(){
+	$('#registration').show();
+	$('#oformlenie').hide();
+	$('#korzinkovets').hide();
+	$('#podrobnvspl').hide();
+	$('#authoris').hide();
+}
+	
+function authshow(){
+	$('#authoris').show();
+	$('#registration').hide();
+	$('#oformlenie').hide();
+	$('#korzinkovets').hide();
+	$('#podrobnvspl').hide();
+}
+	
+function oformlenieshow(){
+	$('#oformlenie').show();
+	$('#authoris').hide();
+	$('#registration').hide();
+	$('#korzinkovets').hide();
+	$('#podrobnvspl').hide();
+}
+
+function showkorzina(){
+	$('#korzinkovets').show();
+	$('#registration').hide();
+	$('#oformlenie').hide();
+	$('#podrobnvspl').hide();
+	$('#authoris').hide();
+}
+
+
+     function lkshowblock(){
+            var style=document.getElementById("lkvsplvk").style.display;
+            if (style=="none"){
+                $("#lkvsplvk").css("display","block");
+				$("#minikorzvspl").css("display","none");
+            }
+            else
+            {
+                $("#lkvsplvk").css("display","none");
+            }
+        }
+        function korzshowblock(){
+            var style=document.getElementById("minikorzvspl").style.display;
+            if (style=="none"){
+                $("#minikorzvspl").css("display","block");
+				$("#lkvsplvk").css("display","none");
+            }
+            else
+            {
+                $("#minikorzvspl").css("display","none");
+            }
+        }
+	function showhccard(id,show){
+		if(id!='' && show=='true')
+		{
+			$('#'+id).show();
+			$('#'+id+'bb').addClass("animushotpr");
+		}
+		else {
+			$('#'+id).hide();
+			$('#'+id+'bb').removeClass("animushotpr");
+		}
+	}
+</script>
+	<script type="text/javascript">	function get_timer_609(string_609) {	var date_new_609 = string_609; var date_t_609 = new Date(date_new_609);	var date_609 = new Date();	var timer_609 = date_t_609 - date_609;		if(date_t_609 > date_609) {		var day_609 = parseInt(timer_609/(60*60*1000*24));		if(day_609 < 10) {			day_609 = "0" + day_609;		}		day_609 = day_609.toString();		var hour_609 = parseInt(timer_609/(60*60*1000))%24;		if(hour_609 < 10) {			hour_609 = "0" + hour_609;		}		hour_609 = hour_609.toString();		var min_609 = parseInt(timer_609/(1000*60))%60;		if(min_609 < 10) {			min_609 = "0" + min_609;		}		min_609 = min_609.toString();		var sec_609 = parseInt(timer_609/1000)%60;		if(sec_609 < 10) {			sec_609 = "0" + sec_609;		}		sec_609 = sec_609.toString(); 		timethis_609 = day_609 + " : " + hour_609 + " : " + min_609 + " : " + sec_609;		$(".timerhello_609 p.result .result-day").text(day_609);		$(".timerhello_609 p.result .result-hour").text(hour_609);		$(".timerhello_609 p.result .result-minute").text(min_609);		$(".timerhello_609 p.result .result-second").text(sec_609);	}	else {		$(".timerhello_609 p.result .result-day").text("00");		$(".timerhello_609 p.result .result-hour").text("00");		$(".timerhello_609 p.result .result-minute").text("00");		$(".timerhello_609 p.result .result-second").text("00");	}	 }function getfrominputs_609(){	string_609 = "01/01/2015 00:00"; 	get_timer_609(string_609);	setInterval(function(){		get_timer_609(string_609);	},1000);}$(document).ready(function(){ 	getfrominputs_609();});		</script>
+	
+	<!--Сайт магазина NK BOOST-->
+</head>
+<!-- Тело -->
+<body>
+<!-- ХЕДЕР -->
+<div class="nk_header">
+	<div class="nk_heafer_inner">
+		<div style="float:left;">
+			<a onclick="javascript:document.cookie='en=true';javascript:document.cookie='ru=';" href="../en/default.htm"><img class="yazuk_top_img_style "class="yazuk_top_img_style "class="yazuk_top_img_style " style="width:24px;height:19px;" src="../templates/main/images/engflag.png"/></a>
+			<a onclick="javascript:document.cookie='ru=true';javascript:document.cookie='en=';" href="default.htm"><img class="yazuk_top_img_style active_lang" style="width:24px;height:19px;" src="../templates/main/images/ruflag.png"/></a>
+		</div>
+		<div class="nk_gheader">
+			<a href="javascript:void()" onclick="lkshowblock()" style="margin-right:30px;">
+				<img src="../templates/main/images/cpigm.png">&nbsp;&nbsp;<span style="text-decoration:underline">Личный кабинет</span>
+			</a>
+			<a href="javascript:void()" onclick="korzshowblock()" style="margin-right:10px;">
+				<img src="../templates/main/images/korzinami.png">&nbsp;&nbsp;<span style="text-decoration:underline">Корзина</span>
+			</a>
+		</div>
+		<!-- Всплывающие окна -->
+		<div class="lkvspluv" id="lkvsplvk" style="display:none;text-align:center;">
+	<span style="font-size:13px"><img src="../templates/main/images/atestatik.jpg"> </span></br>
+	<a href="cp.php">Кабинет</a>
+</div>
+		<div class="korzvspluv" id="minikorzvspl" style="display:none;">
+	<a href="javascript:void" onclick="$('#minikorzvspl').hide()">
+		<img style="float:right;margin: -20px -20px 0 0;" src="../templates/main/images/clzbtn.png">
+	</a>
+	<table style="width:100%;font-family:OpenSansItalic;">
+		<tr>
+			<td style="color:#772828;">В корзине:</td>
+			<td style="color:#fac021;font-family:arial;font-weight:700;">0</td>
+		</tr>
+		<tr>
+			<td style="color:#772828;">На сумму:</td>
+			<td style="color:#772828;font-family:arial;font-weight:700;">0 руб.</td>
+		</tr>
+	</table>
+		<center>Корзина пуста</center>
+	</div>		
+	</div>	
+</div>
+<!-- МЕНЮ -->
+<div class="menubackg">
+	<a href="default.htm"><div class="menus_main"><img src="../templates/main/images/menumain.png"></div></a>	
+	<a href="uslugi.php"><div class="menus_uslugi">УСЛУГИ</div></a>
+	<a href="post.php"><div class="menus_post" style="padding: 19px 49px !important;width: 108px;">ВАКАНСИИ</div></a>
+	<a href="soglas.php"><div class="menus_soglass">СОГЛАШЕНИЯ</div></a>
+	<a href="oplata.php"><div class="menus_oplata">ОПЛАТА</div></a>
+	<a href="faq.php"><div class="menus_faq">FAQ</div></a>
+	<a href="otzuvu.php"><div class="menus_otzuv">ОТЗЫВЫ</div></a>
+	<form method="get" action="/ru/search.php" class="seatrchform" style="float:left;margin: 20px 0 0 27px;">
+		<input name="text" class="srchfinp" type="text" placeholder="Поиск по сайту ...">
+		<input class="srchfsbmt" type="submit" value="">
+	</form>
+</div>
+
+<!--№№№№№№№№№№№№№№№№№№№№№№№ Центра №№№№№№№№№№№№№№№№№№№№№ -->
+<div style="width:1200px;margin:0 auto;height:900px;">
+	<div style="width:1200px;height:686px;">
+		<div style="width:637px;height:686px;float:left;">
+			<img style="padding:30px 0 0 50px;" src="../templates/main/images/oplsposbschel.png">
+		</div>
+		<div style="float:left;width:563px;height:686px;">
+			<center>
+				</br>
+				<span style="font-size:24px;font-family:OpenSans-Bold;color:#d9cb9e;text-transform:uppercase;">Способы оплаты</span></br>
+				<span style="font-size:16px;font-family:OpenSans-Semibold;color:#886d67;text-transform:uppercase;">Заказы можно оплачивать в процессе оформления через</br> Робокассу или прямым переводом по любым</br>
+				из указанных реквизитов :</span>
+				<table style="margin-top:20px;">
+					<tr>
+						<td><img src="../templates/main/images/opls/oplwm.png"></td>
+						<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">R902597031077</td>
+					</tr>
+					<tr>
+						<td><img src="../templates/main/images/opls/oplym.png"></td>
+						<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">410012154983183</td>
+					</tr>
+					<tr>
+						<td><img src="../templates/main/images/opls/oplqui.png"></td>
+						<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">79069516866</td>
+					</tr>
+					<tr>
+						<td><img src="../templates/main/images/opls/oplvisa.png"></td>
+						<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">4276 6400 1010 1295</td>
+					</tr>
+					<tr>
+						<td><img src="../templates/main/images/opls/oplpp.png"></td>
+						<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">NKBOOST@MAIL.RU</td>
+					</tr>
+					<tr>
+						<td><img src="../templates/main/images/opls/oplskrill.png"></td>
+						<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">NEKINEM@BK.RU</td>
+					</tr>
+				</table>
+			</center>
+		</div>
+	</div>	
+	<center>
+		<span style="color:#b91820;font-family:OpenSans-Semibold;font-size:16px;">Внимание!</span></br>
+		<span style="color:#d9cb9e;font-family:OpenSans-Semibold;font-size:16px;">по всем вопросам обращайтесь :</span>
+		<table>
+			<tr>
+				<td><img src="../templates/main/images/opls/oplskype.png"></td>
+				<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">NKBOOST.COM</td>
+			</tr>
+			<tr>
+				<td><img src="../templates/main/images/opls/oplicq.png"></td>
+				<td style="font-family:OpenSans-Semibold;font-size:24px;color:#d9cb9e;padding:20px 35px 20px 35px;">678 725 738</td>
+			</tr>
+		</table>
+		
+	</center>
+</div>
+
+
+
+<div class="nktovarstopbgblock">
+
+<div style="height:85px;"></div>
+
+	
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/813518051warchief_blackhand_by_daerone-d84fnps.png"></div>
+				<div class="nktopscardtovaname">Чернорук</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('81')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('81')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('81')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/813518051warchief_blackhand_by_daerone-d84fnps.png"></div>
+				<div class="nktopscardtovaname">Чернорук</div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/739756750photo.jpg"></div>
+				<div class="nktopscardtovaname">Арена 3v3</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('79')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('79')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('79')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/739756750photo.jpg"></div>
+				<div class="nktopscardtovaname">Арена 3v3</div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/492501408shaman.png"></div>
+				<div class="nktopscardtovaname">shaman </div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('77')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('77')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('77')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/492501408shaman.png"></div>
+				<div class="nktopscardtovaname">shaman </div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/119527861warchief_blackhand_by_daerone-d84fnps.png"></div>
+				<div class="nktopscardtovaname">Чернорук</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('75')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('75')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('75')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/119527861warchief_blackhand_by_daerone-d84fnps.png"></div>
+				<div class="nktopscardtovaname">Чернорук</div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/206571678warchief_blackhand_by_daerone-d84fnps.png"></div>
+				<div class="nktopscardtovaname">Литейная Клана Черной горы</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('74')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('74')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('74')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/206571678warchief_blackhand_by_daerone-d84fnps.png"></div>
+				<div class="nktopscardtovaname">Литейная Клана Черной горы</div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/378259083photo.jpg"></div>
+				<div class="nktopscardtovaname">Полная экипировка </div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('69')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('69')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('69')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/378259083photo.jpg"></div>
+				<div class="nktopscardtovaname">Полная экипировка </div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/254827616M7M51HWDF5OW1375992744654.png"></div>
+				<div class="nktopscardtovaname">0-2000</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('68')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('68')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('68')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/254827616M7M51HWDF5OW1375992744654.png"></div>
+				<div class="nktopscardtovaname">0-2000</div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+<div class="flip-container reclasterflip1" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<div class="nktopscartsfaq">
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/587165613M7M51HWDF5OW1375992744654.png"></div>
+				<div class="nktopscardtovaname">0-1800</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="nktopscartsfaq">
+				<div style="width:280px;height:280px;position:absolute;border-radius:10px;z-index:4;background: rgba(124, 124, 124, 0.59);text-align:center;">
+					</br></br>	
+						<a href="javascript:void()" onclick="podrobneetov('67')"><img src="../templates/main/images/fastlokkbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('67')"><img src="../templates/main/images/tokorzbigbtn.png"></a>
+					</br></br>
+						<a href="javascript:void()" onclick="korzaddnodop('67')"><img src="../templates/main/images/ofzakbigbtn.png"></a>
+				</div>
+				<div style="position:absolute;margin-left:220px;"><img src="../templates/main/images/nkznaktops.png"></div>
+				<div class="nktopsimgblock"><img class="nktopssomoimg" src="../tovars/587165613M7M51HWDF5OW1375992744654.png"></div>
+				<div class="nktopscardtovaname">0-1800</div>
+			</div>
+		</div>
+	</div>
+</div>
+				
+
+</div>
+
+
+
+
+
+<div class="bottomrepeater">
+
+	<!-- SPOSOBU OPLATU -->
+	<div class="oplsposb">
+		<div class="sposoplbkd"><img src="../templates/main/images/oplsos/yan.png"></div>
+		<div class="sposoplbkd"><img src="../templates/main/images/oplsos/qui.png"></div>
+		<div class="sposoplbkd"><img src="../templates/main/images/oplsos/paypal.png"></div>
+		<div class="sposoplbkd"><img src="../templates/main/images/oplsos/wm.png"></div>
+		<div class="sposoplbkd"><img src="../templates/main/images/oplsos/visa.png"></div>
+		<div class="sposoplbkd"><img src="../templates/main/images/oplsos/skrill.png"></div>
+	</div>
+	<div class="overfooter">
+	World of Warcraft tm and Blizzard Entertainment are registered trademarks of Blizzard Entertainment Inc. in U.S.A. and/or other countries. </br>
+	These terms and all related materials, logos, and images are copyright © Blizzard Entertainment. </br>
+	NKboost.com is in no way associated with or endorsed by Blizzard Entertainment™. </br>
+	NKboost.com is not selling wow ingame items, only offers you diffirent services to make your ingame skill better and gifting you ingame items. </br>
+NKboost.com 2014. All Rights Reserved. Coded by 
+<a href="../../https@vk.com/a.sanzharovsky" target="_blank">meylah15</a><center style="float: right;margin-top: -17px;margin-right: 20px;">
+<!-- Yandex.Metrika informer -->
+<a href="../../https@metrika.yandex.ru/stat/@id=25160303&from=informer"
+target="_blank" rel="nofollow"><img src="../../bs.yandex.ru/informer/25160303/3_0_209FFFFF_007FFFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25160303,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25160303 = new Ya.Metrika({id:25160303,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="../../mc.yandex.ru/watch/25160303" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</center>
+	</div>
+	<div class="vspluvbg" id="korzinkovets">
+	<div class="spluvkorzbg">
+		<center style="color:#fac021;font-family:OpenSans-Bold;font-size:18px;padding-top: 20px;">КОРЗИНА</center>
+		<div style="float:right;">
+			<a href="javascript:void;" onclick="klozekorz();"><img class="KREST" src="../templates/main/images/krestclose.png"></a>
+		</div>
+		<div class="korzinkablockover">
+		
+				
+		</div>
+		<div id="opapahsdfgddsdf" style="margin-right:50px;float:right;font-family:arial;font-style:italic;color:#626c74;font-size:14px;">
+		<img src="../templates/main/images/costvisyak.png">Общая сумма : <span style="color:#c88735;font-size:24px;font-family:OpenSans-Semibold">0</span> <span style="font-size:24px;font-family:OpenSans-Semibold;color:#68261e"><STRIKE>Р</STRIKE></span>
+		</div>
+		
+<div style="width:180px;margin:40px auto;">
+				<a href="javascript:void()" onclick="oformlenieshow()">
+					<img  class="incorzoformleniebtn" src="../templates/main/images/ofromzakbtn.png">
+				</a>
+</div>
+	
+	</div>
+
+</div>
+<script>
+
+
+
+
+	function delitemfrkorz(id,tovar){
+		$('#'+id).remove();
+		$.ajax({
+          type: 'GET',
+          url: 'functions/delfrcorz.php@tovar='+tovar,
+		  })
+	}
+
+	function klozekorz(){
+		$('#korzinkovets').hide();
+	}
+	function minuscount(id,tovar){
+		$.ajax({
+          type: 'GET',
+          url: 'functions/countupdate.php@tovar='+tovar,
+		  });
+		  
+		var x = document.getElementById(id).value;
+		var count = parseInt(x)-1;
+		document.getElementById(id).value = count;
+	}
+	function pluscount(id,tovar){
+	$.ajax({
+          type: 'GET',
+          url: 'functions/korzinadd.php@tovar='+tovar,
+		  });
+		var x = document.getElementById(id).value;
+		var count = parseInt(x)+1;
+		document.getElementById(id).value = count;
+	}
+</script>
+	<div class="vspluvbg" id="oformlenie">
+	<div class="spluvoformbg">
+		<center style="color:#fac021;font-family:OpenSans-Bold;font-size:18px;padding-top: 20px;">ОФОРМЛЕНИЕ ЗАКАЗА</center>
+		<div style="float:right;">
+			<a href="javascript:void;" onclick="oformclose();"><img class="KREST" src="../templates/main/images/krestclose.png"></a>
+		</div>
+		<div style="width:595px;height:300px;margin:20px auto;">
+			<form action="javascript:void()" method="post" name="ofromleniy" id="ofromleniy" onsubmit="oformlenit()">
+				<div style="float:left;width:272px;height:300px;line-height:29px;">
+					<center style="color:#4f5561;font-family:OpenSans-Regular;font-size:14px;">
+						Сервер<span style="color:red">*</span></br>
+						<input type="text" name="ofserver" class="oformlenieinputs" required></br>
+						Фракция<span style="color:red">*</span></br>
+						<input type="text" name="offaction" class="oformlenieinputs" required></br>
+						Email<span style="color:red">*</span></br>
+						<input type="email" name="offemail" class="oformlenieinputs" required></br>
+						BattleTag<span style="color:red">*</span></br>
+						<input type="text" name="ofbatletag" class="oformlenieinputs" required></br>
+						Skype<span style="color:red">*</span></br>
+						<input type="text" name="ofskype" class="oformlenieinputs" required></br>
+					</center>
+				</div>
+				<div style="float:right;width:272px;height:300px;line-height:29px;">
+					<center style="color:#4f5561;font-family:OpenSans-Regular;font-size:14px;">
+						Ссылка на персонажа<span style="color:red">*</span></br>
+						<input type="text" name="ofpersurl" class="oformlenieinputs" required></br>
+						Комментарий</br>
+						<textarea class="oformtextarea" name="ofcomment"></textarea>
+					</center>
+				</div>
+			
+		</div>
+		<center style="color:#4f5561;font-family:OpenSans-Regular;font-size:14px;"><span style="color:red">*</span> Обязательное к заполнению</center>
+		<!-- Результат -->
+		<div id="resultatoform" style="height:40px;text-align:center">
+		</div>
+				<input type="hidden" form="ofromleniy" name="valuta" value="" id="valuta">
+		<!-- Результат -->
+		<div style="width:595px;height:200px;margin:50px auto;">
+			<div id="opsposbgsb" style="display:none;">
+			<center style="color:#4f5561;font-family:OpenSans-Regular;font-size:14px;">Выберите удобную Вам систему оплаты :</center>
+			<a href="javascript:void()" onclick="showoplata('pp');"><img style="margin:20px 0 0 38px;" src="../templates/main/images/oplsos/paypal.png"></a>
+			<a href="javascript:void()" onclick="showoplata('robo');oformlenit();"><img style="margin:20px 0 0 38px;" src="../templates/main/images/oplsos/nkrobos.png"></a>
+			<a href="javascript:void()" onclick="showoplata('skrill');"><img style="margin:20px 0 0 38px;" src="../templates/main/images/oplsos/skrill.png"></a>
+			</div>
+			<center style="margin-top:20px;"><input form="ofromleniy" type="submit" value="" class="oformsmbtbtn"><center>
+			
+		</form>			
+					<!-- Скрытые способы оплаты -->
+						<div id="oplpp" style="display:none">
+							<center style="color:#4f5561;font-family:OpenSans-Regular;font-size:14px;">
+								Email PayPal<span style="color:red">*</span></br>
+								<input form="ofromleniy" type="email" name="ppmail" class="oformlenieinputs"></br>
+								На данную почту будет выслан счет оплаты заказа
+							</center>
+						</div>
+						<div id="skrill" style="display:none">
+							<center style="color:#4f5561;font-family:OpenSans-Regular;font-size:14px;">
+								Email Skrill<span style="color:red">*</span></br>
+								<input form="ofromleniy" type="email" name="skrillmail" class="oformlenieinputs"></br>
+								На данную почту будет выслан счет оплаты заказа
+							</center>
+						</div>
+
+					<!-- Скрытые способы оплаты -->
+					
+		</div>
+		
+	</div>
+	
+
+	
+</div>
+<script>
+
+
+ setInterval( function updaterobokaska() { // обновление статуса корзины    
+            $.ajax({
+                url: 'functions/roboupdate.php',
+                success: function(html){
+                    $("#formaroboupdate").html(html);
+                }
+            })},2000);
+
+
+
+	function showoplata(id){
+		if (id=='pp'){
+			$('#oplpp').show();
+			$('#opsposbgsb').hide();
+			document.getElementById('valuta').value = 'pp';
+
+		}
+		if (id=='robo'){
+			$('#robo').show();
+			$('#opsposbgsb').hide();
+			document.getElementById('valuta').value = 'robo';
+		}
+		if (id=='skrill'){
+			$('#skrill').show();
+			$('#opsposbgsb').hide();
+			document.getElementById('valuta').value = 'skrill';
+		}
+	}
+	
+	
+	function oformlenit(){
+	var data   = $('#ofromleniy').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'functions/oformlenie.php',
+		   data: data,
+    success: function(data) {
+            $('#resultatoform').html(data);
+          },
+          error:  function(xhr, str){
+                alert('Возникла ошибка: ' + xhr.responseCode);
+            }
+        });	
+	}
+
+	
+	function oformclose(){
+		$('#oformlenie').hide();
+	}
+
+</script>
+	<div class="vspluvbg" id="registration">
+	<div class="spluvregbg">
+		<center style="color:#fac021;font-family:OpenSans-Bold;font-size:18px;padding-top: 20px;">РЕГИСТРАЦИЯ</center>
+		<div style="float:right;">
+			<a href="javascript:void;" onclick="regclose();"><img class="KREST" src="../templates/main/images/krestclose.png"></a>
+		</div>
+		<form action="javascript:void();" method="post" name="registrform" id="registrform" onsubmit="getregister();">
+			<div style="width:475px;height:400px;margin:20px auto;">
+				<div style="width:236px;height:326px;float:left;text-align:center;color:#4f5561;font-family:OpenSans-Regular;font-size:14px;line-height: 30px;">
+					<center>
+						Имя<span style="color:red">*</span></br>
+						<input type="text" name="regname" class="reglenieinputs" required="required"></br>
+						Фамилия<span style="color:red">*</span></br>
+						<input type="text" name="regsoname" class="reglenieinputs" required="required"></br>
+						Email<span style="color:red">*</span></br>
+						<input type="email" name="regemail" class="reglenieinputs" required="required"></br>
+						Телефон<span style="color:red">*</span></br>
+						<input type="text" name="regtel" class="reglenieinputs" required="required"></br>
+						Страна проживания<span style="color:red">*</span></br>
+						<input type="text" name="regcountry" class="reglenieinputs" required="required"></br>
+					</center>
+				</div>
+				<div style="width:236px;height:326px;float:left;text-align:center;color:#4f5561;font-family:OpenSans-Regular;font-size:14px;line-height: 30px;">
+					<center>
+						Логин<span style="color:red">*</span></br>
+						<input type="text" name="reglogin" class="reglenieinputs" required="required"></br>
+						Пароль<span style="color:red">*</span></br>
+						<input type="password" name="regpass1" class="reglenieinputs" required="required"></br>
+						Повторите пароль<span style="color:red">*</span></br>
+						<input type="password" name="regpass2" class="reglenieinputs" required="required"></br>
+						Skype<span style="color:red">*</span></br>
+						<input type="text" name="regskype" class="reglenieinputs" required="required"></br>
+						Реферальный код</br>
+						<input type="text" name="regrefer" class="reglenieinputs"></br>
+					</center>
+				</div>
+				<center>
+					<input type="submit" value="" class="regfrominsmnt">
+				</center>
+			</div>
+			<div id="resultatischenf" style="width: 500px;text-align: center;margin-top:-20px;">
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<script>
+function getregister(){
+	var data   = $('#registrform').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'functions/registration.php',
+		   data: data,
+			success: function(data) {
+            $('#resultatischenf').html(data);
+          },
+          error:  function(xhr, str){
+                alert('Возникла ошибка: ' + xhr.responseCode);
+            }
+        });	
+	}
+
+	function regclose(){
+		$('#registration').hide();
+	}
+</script>	<div class="vspluvbg" id="authoris">
+	<div class="spluvauthbg">
+		<center id="whatyouydo" style="color:#fac021;font-family:OpenSans-Bold;font-size:18px;padding-top: 20px;">АВТОРИЗАЦИЯ</center>
+		<div style="float:right;">
+			<a href="javascript:void;" onclick="authclose();"><img class="KREST" src="../templates/main/images/krestclose.png"></a>
+		</div>
+		<div id="autherblocker" style="width:300px;height:280px;margin:0 auto;text-align:center;color:#4f5561;font-family:OpenSans-Regular;font-size:14px;line-height: 30px;">
+			<form action="javascript:void()" method="post" name="authforma" id="authforma" onsubmit="getauther()"></br>
+						Логин<span style="color:red">*</span></br>
+						<input type="text" name="authlogin" class="reglenieinputs" required></br>
+						Пароль<span style="color:red">*</span></br>
+						<input type="password" name="authpass" class="reglenieinputs" required></br>
+						<input type="submit" value="" class="authsubmiter">
+			</form>
+			<div id="resultauthera" style="margin-top:-10px;">
+			</div>
+		</div>
+		<div id="repeaterpasser" style="width:300px;height:280px;margin:0 auto;text-align:center;color:#4f5561;font-family:OpenSans-Regular;font-size:14px;line-height: 30px;display:none">
+			<form action="javascript:void()" method="post" name="authformarep" id="authformarep" onsubmit="getlostpass()"></br>
+						Email<span style="color:red">*</span></br>
+						<input type="text" name="repemail" class="reglenieinputs" required></br>
+						Логин<span style="color:red">*</span></br>
+						<input type="text" name="replogin" class="reglenieinputs" required></br>
+						<input type="submit" value="" class="authsubmiter" id="repeattubmiter">
+			</form>
+			<div id="resultrepeatpass" style="margin-top:-10px;">
+			</div>
+		</div>
+		<div style="float:left;margin: -15px 0 0 40px;">
+		<a class="korzervert" href="javascript:void();" onclick="regshow();">Регистрация</a>
+		</div>
+		<div style="float:right;margin: -15px 32px 0 0;">
+		<a class="korzervert" href="javascript:void();" id="lostpaserbtnauth" onclick="showvostpasa();">Забыли пароль?</a>
+		<a class="korzervert" href="javascript:void();" id="authbackbtnauth" style="display:none" onclick="showvosauthagain();">Авторизация</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+
+	function showvostpasa(){
+		$('#repeaterpasser').show();
+		$('#authbackbtnauth').show();
+		$('#lostpaserbtnauth').hide();
+		$('#autherblocker').hide();
+		$('#whatyouydo').html('ВОССТАНОВЛЕНИЕ');
+	}
+	function showvosauthagain(){
+		$('#repeaterpasser').hide();
+		$('#authbackbtnauth').hide();
+		$('#lostpaserbtnauth').show();
+		$('#autherblocker').show();
+		$('#whatyouydo').html('АВТОРИЗАЦИЯ');
+	}
+function getauther(){
+	var data   = $('#authforma').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'functions/auth.php',
+		   data: data,
+			success: function(data) {
+            $('#resultauthera').html(data);
+          },
+          error:  function(xhr, str){
+                alert('Возникла ошибка: ' + xhr.responseCode);
+            }
+        });	
+	}
+function getlostpass(){
+	var data   = $('#authformarep').serialize();
+        $.ajax({
+          type: 'POST',
+          url: 'functions/repeatpass.php',
+		   data: data,
+			success: function(data) {
+            $('#resultrepeatpass').html(data);
+          },
+          error:  function(xhr, str){
+                alert('Возникла ошибка: ' + xhr.responseCode);
+            }
+        });	
+	}
+	function authclose(){
+		$('#authoris').hide();
+	}
+</script>	<div class="vspluvbg" id="podrobnvspl">							
+	</div>
+	
+</div>	
+</body>
+</html>

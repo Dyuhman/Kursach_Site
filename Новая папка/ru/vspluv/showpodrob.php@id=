@@ -1,0 +1,87 @@
+	
+			<div class="spluvpodrovbg">
+									<center style="color:#fac021;font-family:OpenSans-Bold;font-size:18px;padding-top: 20px;">БЫСТРЫЙ ПРОСМОТР</center>
+									<div style="float:right;">
+										<a href="javascript:void;" onclick="podrclose();"><img class="KREST" src="../../templates/main/images/krestclose.png"></a>
+									</div>
+									<div class="divspluvpodroleft">
+										<center style="margin-top:15px;">
+											<img style="width:147px;height;147px;" src="../../tovars/default.htm">
+							<form action="javascript:void()" method="post" onsubmit="korzaddsdop()" id="podrform" name="podrform">
+							<input type="hidden" name="tovar" value="">
+											<select style="margin-top:10px;padding:2px;font-size:12px;border-radius:5px;" form="podrform" name="dopolnitel">
+											<option value="none">Дополнительно</option>
+												</select>
+										<table style="width:100%;">
+											<tr>
+												<td style="padding:10px;"><img src="../../templates/main/images/icstovcode.png"></td>
+												<td style="font-family:Arial;font-style:italic;font-size:13px;color:#673f0c;">Код товара:</td>
+												<td style="font-family:Arial;font-size:13px;color:#0671b9;"></td>
+											</tr>
+											<tr>
+												<td style="padding:10px;"><img src="../../templates/main/images/icsperacc.png"></td>
+												<td style="font-family:Arial;font-style:italic;font-size:13px;color:#673f0c;">Передача аккаунта:</td>
+												<td style="font-family:Arial;font-size:13px;color:#0671b9;"></td>
+											</tr>
+											<tr>
+												<td style="padding:10px;"><img src="../../templates/main/images/icssroki.png"></td>
+												<td style="font-family:Arial;font-style:italic;font-size:13px;color:#673f0c;">Сроки:</td>
+												<td style="font-family:Arial;font-size:13px;color:#0671b9;"></td>
+											</tr>
+											<tr>
+												<td style="padding:10px;"><img src="../../templates/main/images/icscost.png"></td>
+												<td style="font-family:Arial;font-style:italic;font-size:13px;color:#673f0c;">Цена:</td>
+												<td style="font-family:Arial;font-size:13px;color:#0671b9;"> р</td>
+											</tr>
+										</table>
+										</center>
+									</div>
+
+									<div style="float:left;width:420px;height:378px;margin: 34px 0 0 4px;">
+										<div style="height:60px;">
+											<div style="width:335px;float:left;line-height:15px;">
+												<span class="nkcardtovarname"></span></br>
+												<span style="font-family:Arial;font-size:14px;color:#0671b9"></span></br>
+												<span style="font-family:Arial;font-size:12px;color:#505663;font-style:Italic;">Краткое описание:</span>
+											</div>
+											<div style="float:right;margin:-14px 0 0 2px;">
+												<img src="../../templates/main/images/znaks/default.htm">
+											</div>
+										</div>
+										<div class="inpodrobclkops">
+											
+										</div>
+										<center style="margin-top:12px;">
+											<input type="submit" value="" class="buybtnpodr" form="podrform">
+										</center>
+										
+									</div>
+									
+								<div style="float:left;margin:16px 0 0 40px;">
+								<a class="korzervert" href="javascript:void();" onclick="showkorzina();">Вернутся в корзину</a>
+								</div>	
+								
+															</form>
+														<script>
+															function podrclose(){
+																$('#podrobnvspl').hide();
+															}
+														</script>	
+											
+								</div>
+			
+			
+			
+			
+							
+<script>
+function korzaddsdop(){
+	var data   = $('#podrform').serialize();
+        $.ajax({
+          type: 'POST',
+          url: '../functions/korzinadddop.php',
+		  data: data,
+		  success: showkorzina(),
+        })
+}
+</script>	
